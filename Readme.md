@@ -1,7 +1,7 @@
 # Личный проект «Девайс»
 
 * Студент: [Алексей Яцишин](https://up.htmlacademy.ru/htmlcss/35/user/1791887).
-* Наставник: [Олег Цыганов] (https://htmlacademy.ru/profile/olegtsyganov).
+* Наставник: [Олег Цыганов](https://htmlacademy.ru/profile/olegtsyganov).
 
 ---
 
