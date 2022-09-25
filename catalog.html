@@ -69,54 +69,56 @@
 
       <section class="catalog-goods">
         <h3 class="filter-title">Фильтр</h3>
-        <fieldset class="filte-item">
-          <legend>Стоимость</legend>
-          <div class="toogle-bar">
-            <button class="toogle-min" type="button"></button>
-            <button class="toogle-max" type="button"></button>
-          </div>
-        </fieldset>
+        <form class="catalog-filter" action="https://echo.htmlacademy.ru/" method="get">
+          <fieldset class="filte-item">
+            <legend>Стоимость</legend>
+            <div class="toogle-bar">
+              <button class="toogle-min" type="button"></button>
+              <button class="toogle-max" type="button"></button>
+            </div>
+          </fieldset>
 
-        <fieldset class="filte-item">
-          <legend>Цвет</legend>
-          <ul>
-            <li>
-              <input type="checkbox" name="black" id="black" checked>
-              <label for="black">Черный</label>
-            </li>
-            <li>
-              <input type="checkbox" name="white" id="white" checked>
-              <label for="white">Белый</label>
-            </li>
-            <li>
-              <input type="checkbox" name="blue" id="blue">
-              <label for="blue">Синий</label>
-            </li>
-            <li>
-              <input type="checkbox" name="red" id="red">
-              <label for="red">Красный</label>
-            </li>
-            <li>
-              <input type="checkbox" name="pink" id="pink">
-              <label for="pink">Розовый</label>
-            </li>
-          </ul>
-        </fieldset>
+          <fieldset class="filte-item">
+            <legend>Цвет</legend>
+            <ul>
+              <li>
+                <input type="checkbox" name="black" id="black" checked>
+                <label for="black">Черный</label>
+              </li>
+              <li>
+                <input type="checkbox" name="white" id="white" checked>
+                <label for="white">Белый</label>
+              </li>
+              <li>
+                <input type="checkbox" name="blue" id="blue">
+                <label for="blue">Синий</label>
+              </li>
+              <li>
+                <input type="checkbox" name="red" id="red">
+                <label for="red">Красный</label>
+              </li>
+              <li>
+                <input type="checkbox" name="pink" id="pink">
+                <label for="pink">Розовый</label>
+              </li>
+            </ul>
+          </fieldset>
 
-        <fieldset>
-          <legend>Bluetooth</legend>
-          <ul>
-            <li>
-              <input type="radio" name="yes" value="yes" id="yes" checked>
-              <label for="yes">Есть</label>
-            </li>
-            <li>
-              <input type="radio" name="no" value="no" id="no">
-              <label for="no">Нет</label>
-            </li>
-          </ul>
-        </fieldset>
-        <button class="button" type="submit">Показать</button>
+          <fieldset>
+            <legend>Bluetooth</legend>
+            <ul>
+              <li>
+                <input type="radio" name="choice" value="yes" id="yes" checked>
+                <label for="yes">Есть</label>
+              </li>
+              <li>
+                <input type="radio" name="choice" value="no" id="no">
+                <label for="no">Нет</label>
+              </li>
+            </ul>
+          </fieldset>
+          <button class="button" type="submit">Показать</button>
+        </form>
       </section>
       <section class="product-list">
         <ul class="catalog">
@@ -201,7 +203,7 @@
           <a href="#">Контакты</a>
         </li>
       </ul>
-      <a href="tel +7 (812) 812-12-12">+7 (812) 812-12-12</a>
+      <a href="tel +7(812)8121212">+7 (812) 812-12-12</a>
       <section class="social">
         <h2 class="visually-hidden">Социальные сети</h2>
         <ul>
