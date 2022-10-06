@@ -18,13 +18,13 @@
           <input type="search" id="search" placeholder="Текст поиска">
         </form>
         <button class="search-button" type="submit">Найти</button>
-        <a class="navigation-user-link" href="#"><span class="visually-hidden">Имя
-            пользователя.</span>
-          Коля Петухов</a>
-        <a class="navigation-user-link">Выйти</a>
         <ul class="user-interface-list">
           <li class="user-interface-item">
-            <a class="user-link enter" href="#">Войти</a>
+            <a class="navigation-user-link" href="#">
+              Коля Петухов</a>
+          </li>
+          <li class="user-interface-item">
+            <a class="user-link exit">Выйти</a>
           </li>
           <li class="user-interface-item">
             <a href="#">Сравнить</a>
@@ -77,7 +77,7 @@
     </header>
     <main>
       <section class="breadcrumbs">
-        <h1>Моноподы для селфи</h1>
+        <h1 class="breadcrumbs-title">Моноподы для селфи</h1>
         <ul class="breadcrumbs-list">
           <li class="breadcrumbs-item">
             <a class="breadcrumbs-list" href="index.html">Главная</a>
@@ -103,41 +103,41 @@
           </fieldset>
 
           <fieldset class="filters">
-            <legend>Цвет</legend>
+            <legend class="filter-item-name">Цвет</legend>
             <ul class="filter-list">
               <li class="filter-item">
                 <input type="checkbox" name="black" id="black" value="black" checked>
-                <label for="black">Черный</label>
+                <label class="filter-item-label" for="black">Черный</label>
               </li>
               <li class="filter-item">
                 <input type="checkbox" name="white" id="white" value="white" checked>
-                <label for="white">Белый</label>
+                <label class="filter-item-label" for="white">Белый</label>
               </li>
               <li class="filter-item">
                 <input type="checkbox" name="blue" id="blue" value="blue">
-                <label for="blue">Синий</label>
+                <label class="filter-item-label" for="blue">Синий</label>
               </li>
               <li class="filter-item">
                 <input type="checkbox" name="red" id="red" value="red">
-                <label for="red">Красный</label>
+                <label class="filter-item-label" for="red">Красный</label>
               </li>
               <li class="filter-item">
                 <input type="checkbox" name="pink" id="pink" value="pink">
-                <label for="pink">Розовый</label>
+                <label class="filter-item-label" for="pink">Розовый</label>
               </li>
             </ul>
           </fieldset>
 
-          <fieldset>
-            <legend>Bluetooth</legend>
-            <ul>
-              <li>
+          <fieldset class="filters">
+            <legend class="filter-item-name">Bluetooth</legend>
+            <ul class="filter-list">
+              <li class="filter-item">
                 <input type="radio" name="choice" value="yes" id="bluetooth-yes" checked>
-                <label for="bluetooth-yes">Есть</label>
+                <label class="filter-item-label" for="bluetooth-yes">Есть</label>
               </li>
-              <li>
+              <li class="filter-item">
                 <input type="radio" name="choice" value="no" id="bluetooth-no">
-                <label for="bluetooth-no">Нет</label>
+                <label class="filter-item-label" for="bluetooth-no">Нет</label>
               </li>
             </ul>
           </fieldset>
@@ -146,11 +146,11 @@
       </section>
       <section class="product-list">
         <div class="catalog-filters">
-          <label for="select-value">Сортировка:</label>
-          <select id="select-value">
-            <option>Популярные</option>
-            <option>Сначала дорогие</option>
-            <option>Сначала дешевые</option>
+          <label class="catalog-filters-label" for="select-value">Сортировка:</label>
+          <select class="catalog-select" id="select-value">
+            <option value="popular">Популярные</option>
+            <option value="expensive">Сначала дорогие</option>
+            <option value="cheap">Сначала дешевые</option>
           </select>
         </div>
         <ul class="catalog">
@@ -238,7 +238,7 @@
           <a class="footer-shop-services-link" href="#">Контакты</a>
         </li>
       </ul>
-      <a href="tel +78128121212">+7 (812) 812-12-12</a>
+      <a href="tel:+78128121212">+7 (812) 812-12-12</a>
       <section class="social">
         <h2 class="visually-hidden">Социальные сети</h2>
         <ul>
