@@ -22,18 +22,18 @@
               <button class="search-button" type="submit">Найти</button>
             </form>
             <ul class="user-interface-list-catalog">
-              <li class="user-interface-item user-interface-catalog ">
+              <li class="user-interface-item user-interface-catalog">
                 <a class="navigation-user-link" href="#">
                   Коля Петухов</a>
               </li>
-              <li class="user-interface-item">
+              <li class="user-interface-item user-interface-catalog">
                 <a class="user-link user-link-exit">Выйти</a>
               </li>
-              <li class="user-interface-item">
-                <a class="user-link" href="#">Сравнить</a>
+              <li class="user-interface-item user-interface-catalog">
+                <a class="user-link catalog-user-link" href="#">Сравнить</a>
               </li>
-              <li class="user-interface-item">
-                <a class="user-link" href="#"> Корзина</a>
+              <li class="user-interface-item user-interface-catalog">
+                <a class="user-link interface-catalog-basket" href="#"> Корзина</a>
                 <span class="goods-amount">2</span>
               </li>
             </ul>
@@ -104,7 +104,7 @@
       <div class="wrapper-background">
         <div class="catalog-goods container">
           <section class="filters-catalog-goods">
-            <h3 class="filter-title">Фильтр</h3>
+            <h3 class="filter-title">Фильтр:</h3>
             <form class="catalog-filter" action="https://echo.htmlacademy.ru/" method="get">
               <fieldset class="filters">
                 <legend>Стоимость</legend>
@@ -153,7 +153,7 @@
                   </li>
                 </ul>
               </fieldset>
-              <button class="button" type="submit">Показать</button>
+              <button class="button button-filter-catalog" type="submit">Показать</button>
             </form>
           </section>
           <div class="catalog-right-column">
@@ -164,6 +164,20 @@
                 <option value="expensive">Сначала дорогие</option>
                 <option value="cheap">Сначала дешевые</option>
               </select>
+              <div class="catalog-filter-sort">
+                <span class="visually-hidden">Сортировка от меньшего к большему</span>
+                <a class="filter-sort filter-sort-up">
+                  <svg width="12" height="10" viewBox="0 0 12 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M6 0L11.5 10H0.5" fill="#000000" />
+                  </svg>
+                </a>
+                <span class="visually-hidden">Сортировка от большего к меньшему</span>
+                <a class="filter-sort filter-sort-down">
+                  <svg width="12" height="10" viewBox="0 0 12 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M6 0L11.5 10H0.5" fill="#000000" />
+                  </svg>
+                </a>
+              </div>
             </div>
 
             <section class="product-list">
@@ -173,34 +187,42 @@
                     <img src="images/catalog/junior-selfie-stick.jpg" width="360" height="380"
                       alt="Любительская селфи-палка.">
                   </a>
-                  <h3 class="title-goods">Любительская<br>
-                    селфи-палка</h3>
-                  <span class="goods-price">500 ₽</span>
+                  <div class="goods-title-price">
+                    <h3 class="title-goods">Любительская<br>
+                      селфи-палка</h3>
+                    <span class="goods-price">500 ₽</span>
+                    <div>
                 </li>
                 <li class="catalog-item">
                   <a class="catalog-link" href="#">
                     <img src="images/catalog/prof-selfie-stick.jpg" width="360" height="380"
                       alt="Профессиональная селфи-палка.">
                   </a>
-                  <h3 class="title-goods">Профессиональная селфи-палка</h3>
-                  <span class="goods-price">1 500 ₽</span>
+                  <div class="goods-title-price">
+                    <h3 class="title-goods">Профессиональная<br> селфи-палка</h3>
+                    <span class="goods-price">1 500 ₽</span>
+                  </div>
                 </li>
                 <li class="catalog-item">
                   <a class="catalog-link" href="#">
                     <img src="images/catalog/ip68-selfie-stick.jpg" width="360" height="380"
                       alt="Непотопляемая селфи-палка.">
                   </a>
-                  <h3 class="title-goods">Непотопляемая<br>
-                    селфи-палка</h3>
-                  <span class="goods-price">2 500 ₽</span>
+                  <div class="goods-title-price">
+                    <h3 class="title-goods">Непотопляемая<br>
+                      селфи-палка</h3>
+                    <span class="goods-price">2 500 ₽</span>
+                  </div>
                 </li>
                 <li class="catalog-item">
                   <a class="catalog-link" href="#">
                     <img src="images/catalog/follow-me-selfie-stick.jpg" width="360" height="380"
                       alt="Селфи-палка «Следуй за мной».">
                   </a>
-                  <h3 class="title-goods">Селфи-палка «Следуй за мной»</h3>
-                  <span class="goods-price">1 500 ₽</span>
+                  <div class="goods-title-price">
+                    <h3 class="title-goods">Селфи-палка «Следуй за<br> мной»</h3>
+                    <span class="goods-price">1 500 ₽</span>
+                  </div>
                 </li>
               </ul>
               <button class="goods-card-button" type="button">Загрузить ещё</button>
