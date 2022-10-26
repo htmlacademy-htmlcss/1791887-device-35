@@ -72,7 +72,7 @@ body {
 .page-header .container {
   background: linear-gradient(0deg, #FFE17F 94%,
       rgba(255, 255, 255, 1) 94%);
-  padding: 0 0 0 60px;
+  padding: 0 60px 0 60px;
 }
 
 .logo {
@@ -92,6 +92,7 @@ body {
 
 .search-form {
   display: flex;
+  margin-right: 27px;
 }
 
 
@@ -116,7 +117,6 @@ body {
   padding: 10px 56px;
   border: 2px solid #000000;
   border-radius: 0 50px 50px 0;
-  margin-right: 27px;
 }
 
 
@@ -127,7 +127,7 @@ body {
 
 .user-interface-list {
   display: flex;
-  min-width: 497px;
+  width: 100%;
   flex-wrap: wrap;
   list-style: none;
   padding: 0;
@@ -165,29 +165,34 @@ body {
 .catalog-navigation-items {
   list-style: none;
   text-decoration: none;
-  margin: 0;
+  margin: 0 60px 0 60px;
   padding: 0;
 }
 
 .navigation-catalog-services {
   display: flex;
   justify-content: space-between;
+  margin-bottom: 32px;
+}
 
+.catalog-navigation-items :last-child {
+  margin-right: 0;
 }
 
 .submenu-container {
   display: flex;
-  justify-content: flex-start;
   padding: 0 0 60px 0;
-  /*visibility: hidden;*/
+  visibility: hidden;
+  width: 100%;
+  background: #FFE17F;
+  margin-left: -60px;
+  min-width: 1160px;
+  position: relative;
+  z-index: 1;
 }
 
-.catalog-navigation-link {
-  margin-right: 60px;
-}
-
-.catalog-navigation-link :last-child {
-  margin-right: 0;
+.submenu-container .catalog-navigation-items:nth-child(n+2) {
+  margin-left: 0;
 }
 
 .shop-services-link,
@@ -206,10 +211,10 @@ body {
 .shop-services {
   list-style: none;
   padding: 0;
+  margin: 0;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  margin: 0 60px 0 0;
   max-width: 471px;
   width: 100%;
 
@@ -233,6 +238,8 @@ body {
 .sliders-list {
   list-style: none;
   padding: 0;
+  margin: 0 0 70px 0;
+  width: 100%;
 }
 
 .sliders-title {
@@ -241,9 +248,46 @@ body {
   font-weight: 800;
   font-size: 50px;
   line-height: 50px;
-  padding: 167px 0 0 0;
   z-index: -2;
   margin: 0 0 29px 0;
+}
+
+.sliders-item {
+  display: flex;
+  position: relative;
+  z-index: 0;
+  margin-top: -98px;
+}
+
+.sliders-item:nth-child(n+2) {
+  display: none;
+}
+
+.slider-image {
+  margin-right: 40px;
+}
+
+
+.slider-content-description {
+  display: flex;
+  flex-direction: column;
+  padding: 167px 0 0 0;
+
+}
+
+.sliders-info-items {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.sliders-details-list {
+  margin: 0;
+  padding-right: 20px;
+}
+
+.sliders-details-corrected {
+  margin: 0;
+  padding-right: 40px;
 }
 
 .slider-number {
@@ -266,11 +310,11 @@ body {
   font-size: 18px;
   line-height: 30px;
   color: #444444;
-  margin: 0;
+  margin: 0 0 50px 0;
 }
 
 .sliders-button {
-  margin: 50px 0;
+  margin: 0 0 50px 0;
   max-width: 220px;
 }
 
@@ -313,7 +357,7 @@ body {
 }
 
 .sliders-details-description {
-  margin: 0 0 26px 0;
+  margin: 0;
   font-size: 16px;
   line-height: 30px;
   color: #444444;
@@ -325,7 +369,7 @@ body {
   grid-template-columns: repeat(6, 160px);
   gap: 40px;
   padding: 0;
-  margin: 70px 0;
+  margin: 0 0 70px 0;
 }
 
 .products-item {
@@ -353,7 +397,7 @@ body {
   display: block;
   background-image: url(../images/catalog-navigation/monopod.svg);
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: bottom;
 }
 
 .products-item .action-camera {
@@ -395,56 +439,24 @@ body {
   text-decoration: none;
 }
 
-.sliders-item {
-  display: flex;
-  position: relative;
-  background: linear-gradient(0deg, #FFFFFF 66%, #FFE17F 66%);
-  z-index: 10;
-}
-
-.slider-image {
-  margin-right: 40px;
-}
-
-.slider-content-description {
-  display: flex;
-  flex-direction: column;
-}
-
-.sliders-info-items {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.sliders-details-list {
-  margin: 0;
-  padding-right: 20px;
-}
-
-.sliders-details-corrected {
-  margin: 0;
-  padding-right: 40px;
-}
-
-
-
 /* Section services */
 
 .services {
-  margin: 0 0 160px 0;
-  background: linear-gradient(0deg, rgba(240, 240, 240, 1) 90%, rgba(255, 255, 255, 1) 90%);
+  margin: 0 0 70px 0;
+  background: linear-gradient(0deg, rgba(240, 240, 240, 1) 74%, rgba(255, 255, 255, 1) 7%);
 }
 
 .services-list {
   list-style: none;
-  margin: 0;
-  padding: 67px 0 0 0;
+  margin: 0 116px 0 0;
+  padding: 64px 0 0 0;
   z-index: 0;
-
+  flex-shrink: 0;
 }
 
 .services-item {
   position: relative;
+  display: flex;
 }
 
 .services-link {
@@ -453,6 +465,7 @@ body {
   font-weight: 800;
   font-size: 18px;
   line-height: 21px;
+  letter-spacing: 0.2em;
   text-transform: uppercase;
   text-decoration: none;
   text-align: center;
@@ -477,11 +490,20 @@ body {
 .services-link-current {
   color: #FFE17F;
   background-color: #000000;
-  padding: 9px 120px 11px 0;
+  padding: 9px 120px 11px 18px;
 }
 
 .services-item:not(:last-child) {
   margin-bottom: 35px;
+}
+
+.services-item:nth-child(2) {
+  padding-left: 20px;
+}
+
+
+.services-item:nth-child(3) {
+  padding-left: 35px;
 }
 
 .services-container {
@@ -491,6 +513,12 @@ body {
 .info {
   list-style: none;
   margin: 0;
+  padding: 73px 0 0 0;
+  width: 100%;
+}
+
+.info-list:nth-child(n+2) {
+  display: none;
 }
 
 .delivery-title {
@@ -499,7 +527,7 @@ body {
   font-weight: 800;
   font-size: 50px;
   line-height: 50px;
-  margin: 72px 0 34px 0;
+  margin: 0 0 34px 0;
 }
 
 .info-text {
@@ -509,7 +537,10 @@ body {
 
 .delivery-order .container {
   background: #F0F0F0;
+}
 
+.delivery-order {
+  margin: 0 0 70px 0;
 }
 
 .delivery-order-text {
@@ -528,6 +559,9 @@ body {
 }
 
 .delivery-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
   font-weight: 700;
   font-size: 18px;
   line-height: 20px;
@@ -545,15 +579,17 @@ body {
   font-size: 50px;
   line-height: 50px;
   color: #000000;
+  margin: 0;
 }
 
 .about-us-title {
-  margin: 117px 0 48px 0;
+  margin: 0 0 48px 0;
 }
 
 .contacts-delivery-container {
   display: flex;
   justify-content: space-between;
+  margin-bottom: 70px;
 }
 
 .about-us-text,
@@ -563,7 +599,11 @@ body {
 }
 
 .delivery-list-item {
-  margin: 0 0 30px 0;
+  margin-bottom: 18px;
+}
+
+.delivery-list-item:last-child {
+  margin-bottom: 30px;
 }
 
 .button-about-us {
@@ -599,18 +639,17 @@ body {
 
 .newsletter {
   background: #F0F0F0;
+  padding: 64px 0 56px 0;
 }
 
 .newsletter-text {
   color: #444444;
-  margin-left: 290px;
   margin: 0;
 }
 
 .newsletter-form {
   display: flex;
   width: 100%;
-  margin-bottom: 56px;
 }
 
 
@@ -618,8 +657,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 64px 0 144px 0;
-  margin-top: 70px;
+  margin-bottom: 144px;
 }
 
 .newsletter-form-wrapper {
@@ -659,12 +697,19 @@ body {
 /* Footer */
 .footer-information {
   background: #444444;
+  padding: 62px 0;
+}
+
+.footer-logo {
+  display: block;
+  margin-bottom: 35px;
 }
 
 .footer-adress {
   font-size: 16px;
   line-height: 20px;
   color: #FFFFFF;
+  margin: 0;
 }
 
 
@@ -684,7 +729,7 @@ body {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  min-width: 590px;
+  min-width: 550px;
 }
 
 .footer-shop-services-list {
@@ -704,7 +749,6 @@ body {
 .footer-social-container {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 61px;
 }
 
 .rectangle {
@@ -734,6 +778,13 @@ body {
   list-style: none;
 }
 
+.social-list-item {
+  margin-right: 15px;
+}
+
+.social-list-item:last-child {
+  margin: 0;
+}
 
 .social-item-link {
   display: flex;
@@ -743,20 +794,10 @@ body {
   height: 40px;
   background: rgba(255, 255, 255, 0.3);
   border-radius: 50%;
-  margin-right: 15px;
-}
-
-.social-item-link :last-child {
-  margin: 0;
 }
 
 .copyright {
   display: flex;
-}
-
-.footer-logo img {
-  margin-top: 62px;
-  margin-bottom: 35px;
 }
 
 /* Catalog*/
@@ -805,14 +846,13 @@ body {
 }
 
 /* Breadcrumbs */
-
-.breadcrumbs {
-  padding: 35px 0 35px 60px;
-}
-
 .breadcrumbs .container {
   padding: 0 60px;
   width: 1040px;
+}
+
+.breadcrumbs-wrapper {
+  padding: 35px 0 35px 60px;
 }
 
 .breadcrumbs-title {
@@ -924,7 +964,11 @@ body {
   gap: 40px;
 }
 
-.catalog-link {
+.catalog-right-column {
+  width: 100%;
+}
+
+.product-link-item {
   display: flex;
   margin-bottom: 32px;
 }
@@ -961,8 +1005,8 @@ body {
 }
 
 .product-list {
-  padding: 70px 40px 78px 40px;
   background: white;
+  padding: 70px 40px 78px 40px;
 }
 
 .goods-card-button {
@@ -983,7 +1027,8 @@ body {
 
 .filters-catalog-goods {
   background: #F0F0F0;
-  margin-left: 60px;
+  padding-left: 60px;
+  flex-shrink: 0;
 }
 
 .filter-title {
@@ -998,8 +1043,6 @@ body {
 .catalog-filter {
   display: flex;
   flex-direction: column;
-  align-content: flex-start;
-
 }
 
 .pagination-container {
@@ -1014,6 +1057,7 @@ body {
   align-items: center;
   background: #EBEBEB;
   padding: 0;
+  margin: 0;
   max-width: 200px;
 }
 

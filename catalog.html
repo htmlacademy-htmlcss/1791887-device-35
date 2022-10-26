@@ -11,7 +11,7 @@
     <header class="page-header">
       <div class="container">
         <h1 class="visually-hidden"> Страница каталога: Моноподы для селфи</h1>
-        <nav>
+        <nav class="navigation-interface">
           <a class="logo-link" href="index.html">
             <img class="logo" src="images/logo.svg" width="145" height="36" alt="Логотип сайта Девайс.">
           </a>
@@ -88,7 +88,8 @@
 
     <main class="main-container">
       <section class="breadcrumbs container">
-        <h2 class="breadcrumbs-title">Моноподы для селфи</h1>
+        <div class="breadcrumbs-wrapper">
+          <h1 class="breadcrumbs-title">Моноподы для селфи</h1>
           <ul class="breadcrumbs-list">
             <li class="breadcrumbs-item">
               <a class="breadcrumbs-link" href="index.html">Главная</a>
@@ -100,6 +101,7 @@
               <a class="breadcrumbs-link breadcrumbs-link-check" href="#">Моноподы для селфи</a>
             </li>
           </ul>
+        </div>
       </section>
       <div class="wrapper-background">
         <div class="catalog-goods container">
@@ -165,14 +167,14 @@
                 <option value="cheap">Сначала дешевые</option>
               </select>
               <div class="catalog-filter-sort">
-                <span class="visually-hidden">Сортировка от меньшего к большему</span>
                 <a class="filter-sort filter-sort-up">
+                  <span class="visually-hidden">Сортировка от меньшего к большему</span>
                   <svg width="12" height="10" viewBox="0 0 12 10" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M6 0L11.5 10H0.5" fill="#000000" />
                   </svg>
                 </a>
-                <span class="visually-hidden">Сортировка от большего к меньшему</span>
                 <a class="filter-sort filter-sort-down">
+                  <span class="visually-hidden">Сортировка от большего к меньшему</span>
                   <svg width="12" height="10" viewBox="0 0 12 10" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M6 0L11.5 10H0.5" fill="#000000" />
                   </svg>
@@ -181,9 +183,10 @@
             </div>
 
             <section class="product-list">
+              <h2 class="visually-hidden">Список товаров</h2>
               <ul class="catalog">
                 <li class="catalog-item">
-                  <a class="catalog-link" href="#">
+                  <a class="product-link-item" href="#">
                     <img src="images/catalog/junior-selfie-stick.jpg" width="360" height="380"
                       alt="Любительская селфи-палка.">
                   </a>
@@ -191,10 +194,10 @@
                     <h3 class="title-goods">Любительская<br>
                       селфи-палка</h3>
                     <span class="goods-price">500 ₽</span>
-                    <div>
+                  </div>
                 </li>
                 <li class="catalog-item">
-                  <a class="catalog-link" href="#">
+                  <a class="product-link-item" href="#">
                     <img src="images/catalog/prof-selfie-stick.jpg" width="360" height="380"
                       alt="Профессиональная селфи-палка.">
                   </a>
@@ -204,7 +207,7 @@
                   </div>
                 </li>
                 <li class="catalog-item">
-                  <a class="catalog-link" href="#">
+                  <a class="product-link-item" href="#">
                     <img src="images/catalog/ip68-selfie-stick.jpg" width="360" height="380"
                       alt="Непотопляемая селфи-палка.">
                   </a>
@@ -215,7 +218,7 @@
                   </div>
                 </li>
                 <li class="catalog-item">
-                  <a class="catalog-link" href="#">
+                  <a class="product-link-item" href="#">
                     <img src="images/catalog/follow-me-selfie-stick.jpg" width="360" height="380"
                       alt="Селфи-палка «Следуй за мной».">
                   </a>
@@ -280,7 +283,7 @@
             </li>
           </ul>
           <div class="footer-phone-container">
-            <a class="footer-adress footer-adress-tel" href="tel:+78128121212">+7 (812) 812-12-12</a>
+            <a class="footer-adress footer-adress-tel" href="tel:+78128121212">Тел.: +7 (812) 812-12-12</a>
           </div>
         </div>
         <div class="footer-social-container">
