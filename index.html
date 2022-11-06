@@ -23,13 +23,13 @@
             </form>
             <ul class="user-interface-list">
               <li class="user-interface-item">
-                <a class="user-link" href="#">Войти</a>
+                <a class="user-link login-link-enter" href="#">Войти</a>
               </li>
               <li class="user-interface-item">
-                <a class="user-link" href="#">Сравнить</a>
+                <a class="user-link comparison-link" href="#">Сравнить</a>
               </li>
               <li class="user-interface-item">
-                <a class="user-link" href="#"> Корзина</a>
+                <a class="user-link basket-link" href="#"> Корзина</a>
                 <span class="goods-amount">2</span>
               </li>
             </ul>
@@ -161,8 +161,34 @@
               </div>
             </li>
           </ul>
+          <div class="slider-button">
+            <button class="slider-navigation slider-back" type="button">
+              <span class="visually-hidden">Предыдущее фото.</span>
+            </button>
+            <button class="slider-navigation slider-next" type="button">
+              <span class="visually-hidden">Следующее фото.</span>
+            </button>
+          </div>
         </div>
+        <ol class="sliders-indicators">
+          <li class="sliders-indicators-list">
+            <button class="sliders-indicators-button sliders-button-current" type="button">
+              <span class="visually-hidden">1 слайд.</span>
+            </button>
+          </li>
+          <li class="sliders-indicators-list">
+            <button class="sliders-indicators-button" type="button">
+              <span class="visually-hidden">2 слайд.</span>
+            </button>
+          </li>
+          <li class="sliders-indicators-list">
+            <button class="sliders-indicators-button" type="button">
+              <span class="visually-hidden">3 слайд.</span>
+            </button>
+          </li>
+        </ol>
       </section>
+
 
       <section class="products">
         <div class="container">
@@ -214,22 +240,22 @@
             </li>
           </ul>
           <ul class="info">
-            <li class="info-list">
+            <li class="info-list info-list-delivery">
               <h3 class="delivery-title">Доставка</h3>
               <p class="info-text">Мы с удовольствием доставим ваш товар прямо<br>
                 к вашему подъезду совершенно бесплатно! Ведь.<br>
                 мы неплохо заработаем, поднимая его на ваш этаж.</p>
             </li>
-            <li class="info-list">
+            <li class="info-list info-list-guaranty">
               <h3 class="delivery-title">Гарантия</h3>
               <p class="info-text">Если из-за возгорания купленного у нас товара у вас<br>
                 сгорит дом — не переживайте, мы выдадим вам новый.<br>
                 Товар, не дом, конечно же.</p>
             </li>
-            <li class="info-list">
+            <li class="info-list info-list-credit">
               <h3 class="delivery-title">Кредит</h3>
-              <p class="info-text">Залезть в долговую яму стало проще!<br>
-                Кредитные консультанты подберут для вас наиболее выгодные<br>
+              <p class="info-text">Залезть в долговую яму стало проще! Кредитные <br>
+                консультанты подберут для вас наиболее выгодные<br>
                 условия кредита. Выгодные для банка, разумеется.
               </p>
             </li>
