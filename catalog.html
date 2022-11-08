@@ -30,11 +30,12 @@
                 <a class="user-link user-link-exit">Выйти</a>
               </li>
               <li class="user-interface-item user-interface-catalog">
-                <a class="user-link comparison-link" href="#">Сравнить</a>
+                <a class="user-link comparison-link comparison-link-catalog" href="#">Сравнить</a>
               </li>
               <li class="user-interface-item user-interface-catalog">
-                <a class="user-link basket-link" href="#"> Корзина</a>
-                <span class="goods-amount">2</span>
+                <a class="user-link basket-link" href="#"> Корзина
+                  <span class="goods-amount">2</span>
+                </a>
               </li>
             </ul>
           </div>
@@ -109,7 +110,7 @@
             <h3 class="filter-title">Фильтр:</h3>
             <form class="catalog-filter" action="https://echo.htmlacademy.ru/" method="get">
               <fieldset class="filters">
-                <legend>Стоимость</legend>
+                <legend class="filter-item-name">Стоимость</legend>
                 <div class="toogle-bar">
                   <button class="toogle-min" type="button"></button>
                   <button class="toogle-max" type="button"></button>
@@ -170,13 +171,13 @@
                 <a class="filter-sort filter-sort-up">
                   <span class="visually-hidden">Сортировка от меньшего к большему</span>
                   <svg width="12" height="10" viewBox="0 0 12 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M6 0L11.5 10H0.5" fill="#000000" />
+                    <path d="M6 0L11.5 10H0.5" fill="#cccccc" />
                   </svg>
                 </a>
                 <a class="filter-sort filter-sort-down">
                   <span class="visually-hidden">Сортировка от большего к меньшему</span>
                   <svg width="12" height="10" viewBox="0 0 12 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M6 0L11.5 10H0.5" fill="#000000" />
+                    <path d="M6 0L11.5 10H0.5" fill="#cccccc" />
                   </svg>
                 </a>
               </div>
@@ -195,6 +196,9 @@
                       селфи-палка</h3>
                     <span class="goods-price">500 ₽</span>
                   </div>
+                  <div class="popup-cart-product">
+                    <a class="popover-catalog-goods button-card-product" href="#">Подробнее</a>
+                  </div>
                 </li>
                 <li class="catalog-item">
                   <a class="product-link-item" href="#">
@@ -204,6 +208,9 @@
                   <div class="goods-title-price">
                     <h3 class="title-goods">Профессиональная<br> селфи-палка</h3>
                     <span class="goods-price">1 500 ₽</span>
+                  </div>
+                  <div class="popup-cart-product">
+                    <a class="popover-catalog-goods button-card-product" href="#">Подробнее</a>
                   </div>
                 </li>
                 <li class="catalog-item">
@@ -216,6 +223,9 @@
                       селфи-палка</h3>
                     <span class="goods-price">2 500 ₽</span>
                   </div>
+                  <div class="popup-cart-product">
+                    <a class="popover-catalog-goods button-card-product" href="#">Подробнее</a>
+                  </div>
                 </li>
                 <li class="catalog-item">
                   <a class="product-link-item" href="#">
@@ -226,11 +236,14 @@
                     <h3 class="title-goods">Селфи-палка «Следуй за<br> мной»</h3>
                     <span class="goods-price">1 500 ₽</span>
                   </div>
+                  <div class="popup-cart-product">
+                    <a class="popover-catalog-goods button-card-product" href="#">Подробнее</a>
+                  </div>
                 </li>
               </ul>
               <button class="goods-card-button" type="button">Загрузить ещё</button>
               <div class="pagination-container">
-                <a class="pagination-back">
+                <a class="pagination-back pagination-disabled">
                   <span>Назад</span>
                 </a>
                 <ul class="pagination-container-list">
@@ -340,7 +353,7 @@
             </div>
           </section>
           <div class="copyright">
-            <a href="https://htmlacademy.ru/">
+            <a class="htmlacademy-link" href="https://htmlacademy.ru/">
               <svg width="115" height="33" viewBox="0 0 115 33" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M0 12.9V15.5H2.5V12.9H0Z" fill="#FFC700" />
                 <path
