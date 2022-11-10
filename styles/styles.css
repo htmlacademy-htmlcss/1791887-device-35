@@ -184,7 +184,7 @@ body {
   width: 15px;
   height: 12px;
   margin-right: 12px;
-  background-image: url(..//images/icon-navigation/icon-login.svg);
+  background-image: url(../images/icon-navigation/icon-login.svg);
   background-repeat: no-repeat;
 }
 
@@ -234,7 +234,7 @@ body {
   width: 10px;
   height: 12px;
   margin-right: 12px;
-  background-image: url(..//images/icon-navigation/icon-comparison.svg);
+  background-image: url(../images/icon-navigation/icon-comparison.svg);
   background-repeat: no-repeat;
 }
 
@@ -314,6 +314,10 @@ body {
   z-index: 1;
 }
 
+.submenu-container-open {
+  visibility: visible;
+}
+
 .submenu-container .catalog-navigation-items:nth-child(n+2) {
   margin-left: 0;
 }
@@ -389,7 +393,7 @@ body {
   height: 50px;
   border: 2px solid #000000;
   border-radius: 50px;
-  background-image: url(..//images/icon-navigation/plus.svg);
+  background-image: url(../images/icon-navigation/plus.svg);
   background-size: 16px;
   background-repeat: no-repeat;
   background-position: center;
@@ -404,7 +408,7 @@ body {
 }
 
 .catalog-link:active::after {
-  background-image: url(..//images/icon-navigation/minus.svg);
+  background-image: url(../images/icon-navigation/minus.svg);
 }
 
 .catalog-link:focus {
@@ -463,6 +467,10 @@ body {
   padding: 0 20px 20px 20px;
 }
 
+.popover-open {
+  visibility: visible;
+}
+
 .popover::before {
   content: "";
   position: absolute;
@@ -470,7 +478,7 @@ body {
   right: 160px;
   width: 14px;
   height: 7px;
-  background-image: url(..//images/decor/arrow-popover.svg);
+  background-image: url(../images/decor/arrow-popover.svg);
   background-repeat: no-repeat;
 }
 
@@ -523,6 +531,14 @@ body {
   background-color: #000000;
   text-decoration: none;
   color: #ffffff;
+}
+
+.popover-link:focus {
+  outline: none;
+}
+
+.popover-link:focus-visible {
+  outline: 2px solid #AF4FFF;
 }
 
 .close-button {
@@ -886,7 +902,6 @@ body {
 }
 
 .product-card {
-  display: flex;
   background-color: #FFE17F;
   height: 160px;
   justify-content: center;
@@ -1415,6 +1430,9 @@ body {
   background-color: #F0F0F0;
   border: none;
   border-bottom: 3px solid #C4C4C4;
+  font-size: 18px;
+  line-height: 30px;
+  padding: 12px 16px;
 }
 
 .newsletter-label:focus {
@@ -1469,7 +1487,7 @@ body {
   content: "";
   width: 16px;
   height: 16px;
-  background-image: url(..//images/decor/tick-big.svg);
+  background-image: url(../images/decor/tick-big.svg);
   background-repeat: no-repeat;
   margin-right: 16px;
 }
@@ -1700,7 +1718,7 @@ body {
   width: 15px;
   height: 12px;
   margin-right: 13px;
-  background-image: url(..//images/icon-navigation/icon-login.svg);
+  background-image: url(../images/icon-navigation/icon-login.svg);
   background-repeat: no-repeat;
 }
 
@@ -1759,7 +1777,7 @@ body {
   position: absolute;
   width: 4px;
   height: 7px;
-  background-image: url(..//images/catalog/decor-catalog/icon-breadcrumbs.svg);
+  background-image: url(../images/catalog/decor-catalog/icon-breadcrumbs.svg);
   transform: translateY(-50%);
   top: 50%;
   right: -20px;
@@ -1837,10 +1855,11 @@ body {
 }
 
 .filter-sort {
-  cursor: pointer;
+  border: none;
+  padding: 0;
 }
 
-.filter-sort-up svg {
+.filter-sort-up {
   margin-right: 10px;
 }
 
@@ -1883,6 +1902,15 @@ body {
   line-height: 30px;
   border: none;
   background: #F0F0F0;
+  cursor: pointer;
+}
+
+.catalog-select:focus {
+  outline: none;
+}
+
+.catalog-select:focus-visible {
+  outline: 2px solid #AF4FFF;
 }
 
 /* Goods */
@@ -1906,11 +1934,22 @@ body {
 
 .product-link-item {
   display: flex;
-  margin-bottom: 32px;
+  flex-direction: column;
+  color: #000000;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 20px;
+  letter-spacing: -0.02em;
+}
+
+.product-link-item:focus {
+  outline: none;
 }
 
 .goods-title-price {
   display: flex;
+  margin-top: 32px;
 }
 
 .title-goods {
@@ -2024,13 +2063,26 @@ body {
   background-color: #FFC700;
 }
 
-.catalog-item:focus {
-  outline: none;
-}
-
-.catalog-item:focus-visible {
+.button-card-product:focus {
   outline: 2px solid #AF4FFF;
 }
+
+.catalog-item:hover .popup-cart-product {
+  visibility: visible;
+}
+
+.catalog-item:hover .goods-title-price {
+  opacity: 0.6;
+}
+
+.catalog-item:active .goods-title-price {
+  opacity: 0.3;
+}
+
+.catalog-item:focus-within {
+  outline: 2px solid #AF4FFF;
+}
+
 
 .goods-card-button:hover {
   border: 3px solid #000000;
