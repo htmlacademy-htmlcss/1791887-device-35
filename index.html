@@ -23,14 +23,48 @@
             </form>
             <ul class="user-interface-list">
               <li class="user-interface-item">
-                <a class="user-link" href="#">Войти</a>
+                <a class="user-link login-link-enter" href="#">Войти</a>
+              </li>
+              <li class="user-interface-item comparison-item">
+                <a class="user-link comparison-link" href="#">Сравнить</a>
               </li>
               <li class="user-interface-item">
-                <a class="user-link" href="#">Сравнить</a>
-              </li>
-              <li class="user-interface-item">
-                <a class="user-link" href="#"> Корзина</a>
-                <span class="goods-amount">2</span>
+                <a class="user-link basket-link" href="#"> Корзина
+                  <span class="goods-amount">2</span>
+                </a>
+                <!--Для того, чтобы открыть popover корзины, нужно добавить второй класс popover-open-->
+                <div class="popover popover-cart">
+                  <div class="popover-content">
+                    <h2 class="visually-hidden">Корзина</h2>
+                  </div>
+                  <ul class="popover-items">
+                    <li class="popover-list-items">
+                      <div class="container-goods-basket">
+                        <img class="popover-image" src="images/popover-items/pop-self-junior.png"
+                          alt="Любительская селфи-палка." width="39" height="43">
+                        <a class="popover-link" href="#">Любительская<br>селфи-палка</a>
+                      </div>
+                      <button class="close-button" type="button">
+                        <span class="visually-hidden">Закрыть.</span>
+                      </button>
+                    </li>
+                    <li class="popover-list-items popover-list">
+                      <div class="container-goods-basket">
+                        <img class="popover-image" src="images/popover-items/pop-self-stick-prof.png"
+                          alt="Профессиональная селфи-палка." width="39" height="43">
+                        <a class="popover-link" href="#">Профессиональная<br>селфи-палка</a>
+                      </div>
+                      <button class="close-button-second" type="button">
+                        <span class="visually-hidden">Закрыть.</span>
+                      </button>
+                    </li>
+                  </ul>
+                  <div class="total-goods container-goods">
+                    <p class="number-goods">Товаров: 2</p>
+                    <p class="price-goods">Сумма: 2000 ₽</p>
+                  </div>
+                  <button class="button-popover" type="button">Открыть корзину</button>
+                </div>
               </li>
             </ul>
           </div>
@@ -51,6 +85,7 @@
                 </li>
               </ul>
             </div>
+            <!--Для того, чтобы показать данный список, нужно добавить для этого элемента второй класс submenu-container-open -->
             <div class="submenu-container">
               <ul class="catalog-navigation-items">
                 <li class="catalog-navigation-link">
@@ -161,38 +196,64 @@
               </div>
             </li>
           </ul>
+          <div class="slider-button">
+            <button class="slider-navigation slider-back" type="button">
+              <span class="visually-hidden">Предыдущее фото.</span>
+            </button>
+            <button class="slider-navigation slider-next" type="button">
+              <span class="visually-hidden">Следующее фото.</span>
+            </button>
+          </div>
         </div>
+        <ol class="sliders-indicators">
+          <li class="sliders-indicators-list">
+            <button class="sliders-indicators-button sliders-button-current" type="button">
+              <span class="visually-hidden">1 слайд.</span>
+            </button>
+          </li>
+          <li class="sliders-indicators-list">
+            <button class="sliders-indicators-button" type="button">
+              <span class="visually-hidden">2 слайд.</span>
+            </button>
+          </li>
+          <li class="sliders-indicators-list">
+            <button class="sliders-indicators-button" type="button">
+              <span class="visually-hidden">3 слайд.</span>
+            </button>
+          </li>
+        </ol>
       </section>
-
       <section class="products">
         <div class="container">
           <h2 class="visually-hidden">Категории товаров</h2>
           <ul class="products-list">
             <li class="products-item">
-              <span class="product-card virtual-reality"></span>
-              <a class="products-link" href="#">Виртуальная реальность</a>
+              <a class="products-link" href="#">
+                <span class="product-card virtual-reality"></span>Виртуальная реальность
+              </a>
             </li>
             <li class="products-item">
-
               <a class="products-link" href="catalog.html">
-                <span class="product-card monopod"></span>Моноподы
+                <span class="product-card monopod"></span>Моноподы<br>
                 для селфи</a>
             </li>
             <li class="products-item">
-              <span class="product-card action-camera"></span>
-              <a class="products-link" href="#">Экшн-камеры</a>
+              <a class="products-link" href="#">
+                <span class="product-card action-camera"></span>Экшн-камеры
+              </a>
             </li>
             <li class="products-item">
-              <span class="product-card fitness-bracelet"></span>
-              <a class="products-link" href="#">Фитнес-браслеты</a>
+              <a class="products-link" href="#">
+                <span class="product-card fitness-bracelet"></span>Фитнес-браслеты
+              </a>
             </li>
             <li class="products-item">
-              <span class="product-card smart-watch"></span>
-              <a class="products-link" href="#">Умные часы</a>
+              <a class="products-link" href="#"><span class="product-card smart-watch"></span>Умные часы
+              </a>
             </li>
             <li class="products-item">
-              <span class="product-card quadcopter"></span>
-              <a class="products-link" href="#">Квадрокоптеры</a>
+              <a class="products-link" href="#"><span class="product-card quadcopter"></span>Квадрокоптеры
+              </a>
             </li>
           </ul>
         </div>
@@ -203,33 +264,33 @@
           <h2 class="visually-hidden">Условия доставки, условия гарантий и кредитования</h2>
           <ul class="services-list">
             <li class="services-item">
-              <a class="services-link services-link-current" href="#">Доставка</a>
+              <a class="services-link services-link-current" href="#"><span
+                  class="services-item-current">Доставка</span></a>
             </li>
             <li class="services-item">
-              <a class="services-link" href="#">
-                <span>Гарантия</span></a>
+              <a class="services-link services-item-name services-item-rectangle" href="#"><span>Гарантия</span></a>
             </li>
             <li class="services-item">
-              <a class="services-link" href="#">Кредит</a>
+              <a class="services-link services-item-name" href="#"><span>Кредит</span></a>
             </li>
           </ul>
           <ul class="info">
-            <li class="info-list">
+            <li class="info-list info-list-delivery">
               <h3 class="delivery-title">Доставка</h3>
               <p class="info-text">Мы с удовольствием доставим ваш товар прямо<br>
                 к вашему подъезду совершенно бесплатно! Ведь.<br>
                 мы неплохо заработаем, поднимая его на ваш этаж.</p>
             </li>
-            <li class="info-list">
+            <li class="info-list info-list-guaranty">
               <h3 class="delivery-title">Гарантия</h3>
               <p class="info-text">Если из-за возгорания купленного у нас товара у вас<br>
                 сгорит дом — не переживайте, мы выдадим вам новый.<br>
                 Товар, не дом, конечно же.</p>
             </li>
-            <li class="info-list">
+            <li class="info-list info-list-credit">
               <h3 class="delivery-title">Кредит</h3>
-              <p class="info-text">Залезть в долговую яму стало проще!<br>
-                Кредитные консультанты подберут для вас наиболее выгодные<br>
+              <p class="info-text">Залезть в долговую яму стало проще! Кредитные <br>
+                консультанты подберут для вас наиболее выгодные<br>
                 условия кредита. Выгодные для банка, разумеется.
               </p>
             </li>
@@ -276,7 +337,7 @@
           <a class="contacts-phone" href="tel:+78128121212">+7 (812) 812-12-12</a>
           <h3 class="operating-time">Время работы</h3>
           <p class="operating-time-description">пн—пт: с 10:00 до 22:00 <br> сб—вс: с 10:00 до 19:00</p>
-          <a class="button" href="#">Напишите нам</a>
+          <a class="button button-write-us" href="#">Напишите нам</a>
         </section>
       </div>
 
@@ -379,7 +440,7 @@
             </div>
           </section>
           <div class="copyright">
-            <a href="https://htmlacademy.ru/">
+            <a class="htmlacademy-link" href="https://htmlacademy.ru/">
               <svg width="115" height="33" viewBox="0 0 115 33" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M0 12.9V15.5H2.5V12.9H0Z" fill="#FFC700" />
                 <path

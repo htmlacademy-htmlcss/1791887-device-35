@@ -10,7 +10,7 @@
   <body>
     <header class="page-header">
       <div class="container">
-        <h1 class="visually-hidden"> Страница каталога: Моноподы для селфи</h1>
+        <h2 class="visually-hidden"> Страница каталога: Моноподы для селфи</h2>
         <nav class="navigation-interface">
           <a class="logo-link" href="index.html">
             <img class="logo" src="images/logo.svg" width="145" height="36" alt="Логотип сайта Девайс.">
@@ -23,18 +23,52 @@
             </form>
             <ul class="user-interface-list-catalog">
               <li class="user-interface-item user-interface-catalog">
-                <a class="navigation-user-link" href="#">
+                <a class="navigation-user-link login-user-link" href="#">
                   Коля Петухов</a>
               </li>
               <li class="user-interface-item user-interface-catalog">
                 <a class="user-link user-link-exit">Выйти</a>
               </li>
               <li class="user-interface-item user-interface-catalog">
-                <a class="user-link catalog-user-link" href="#">Сравнить</a>
+                <a class="user-link comparison-link comparison-link-catalog" href="#">Сравнить</a>
               </li>
               <li class="user-interface-item user-interface-catalog">
-                <a class="user-link interface-catalog-basket" href="#"> Корзина</a>
-                <span class="goods-amount">2</span>
+                <a class="user-link basket-link" href="#"> Корзина
+                  <span class="goods-amount">2</span>
+                </a>
+                <!--Для того, чтобы открыть popover корзины, нужно добавить второй класс popover-open-->
+                <div class="popover popover-cart">
+                  <div class="popover-content">
+                    <h2 class="visually-hidden">Корзина</h2>
+                  </div>
+                  <ul class="popover-items">
+                    <li class="popover-list-items">
+                      <div class="container-goods-basket">
+                        <img class="popover-image" src="images/popover-items/pop-self-junior.png"
+                          alt="Любительская селфи-палка." width="39" height="43">
+                        <a class="popover-link" href="#">Любительская<br>селфи-палка</a>
+                      </div>
+                      <button class="close-button" type="button">
+                        <span class="visually-hidden">Закрыть.</span>
+                      </button>
+                    </li>
+                    <li class="popover-list-items popover-list">
+                      <div class="container-goods-basket">
+                        <img class="popover-image" src="images/popover-items/pop-self-stick-prof.png"
+                          alt="Профессиональная селфи-палка." width="39" height="43">
+                        <a class="popover-link" href="#">Профессиональная<br>селфи-палка</a>
+                      </div>
+                      <button class="close-button-second" type="button">
+                        <span class="visually-hidden">Закрыть.</span>
+                      </button>
+                    </li>
+                  </ul>
+                  <div class="total-goods container-goods">
+                    <p class="number-goods">Товаров: 2</p>
+                    <p class="price-goods">Сумма: 2000 ₽</p>
+                  </div>
+                  <button class="button-popover" type="button">Открыть корзину</button>
+                </div>
               </li>
             </ul>
           </div>
@@ -109,7 +143,7 @@
             <h3 class="filter-title">Фильтр:</h3>
             <form class="catalog-filter" action="https://echo.htmlacademy.ru/" method="get">
               <fieldset class="filters">
-                <legend>Стоимость</legend>
+                <legend class="filter-item-name">Стоимость</legend>
                 <div class="toogle-bar">
                   <button class="toogle-min" type="button"></button>
                   <button class="toogle-max" type="button"></button>
@@ -167,18 +201,18 @@
                 <option value="cheap">Сначала дешевые</option>
               </select>
               <div class="catalog-filter-sort">
-                <a class="filter-sort filter-sort-up">
+                <button class="filter-sort filter-sort-up">
                   <span class="visually-hidden">Сортировка от меньшего к большему</span>
                   <svg width="12" height="10" viewBox="0 0 12 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M6 0L11.5 10H0.5" fill="#000000" />
+                    <path d="M6 0L11.5 10H0.5" fill="#cccccc" />
                   </svg>
-                </a>
-                <a class="filter-sort filter-sort-down">
+                </button>
+                <button class="filter-sort filter-sort-down">
                   <span class="visually-hidden">Сортировка от большего к меньшему</span>
                   <svg width="12" height="10" viewBox="0 0 12 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M6 0L11.5 10H0.5" fill="#000000" />
+                    <path d="M6 0L11.5 10H0.5" fill="#cccccc" />
                   </svg>
-                </a>
+                </button>
               </div>
             </div>
 
@@ -189,48 +223,60 @@
                   <a class="product-link-item" href="#">
                     <img src="images/catalog/junior-selfie-stick.jpg" width="360" height="380"
                       alt="Любительская селфи-палка.">
+                    <div class="goods-title-price">
+                      <h3 class="title-goods">Любительская<br>
+                        селфи-палка</h3>
+                      <span class="goods-price">500 ₽</span>
+                    </div>
                   </a>
-                  <div class="goods-title-price">
-                    <h3 class="title-goods">Любительская<br>
-                      селфи-палка</h3>
-                    <span class="goods-price">500 ₽</span>
+                  <div class="popup-cart-product">
+                    <a class="popover-catalog-goods button-card-product" href="#">Подробнее</a>
                   </div>
                 </li>
                 <li class="catalog-item">
                   <a class="product-link-item" href="#">
                     <img src="images/catalog/prof-selfie-stick.jpg" width="360" height="380"
                       alt="Профессиональная селфи-палка.">
+                    <div class="goods-title-price">
+                      <h3 class="title-goods">Профессиональная<br> селфи-палка</h3>
+                      <span class="goods-price">1 500 ₽</span>
+                    </div>
                   </a>
-                  <div class="goods-title-price">
-                    <h3 class="title-goods">Профессиональная<br> селфи-палка</h3>
-                    <span class="goods-price">1 500 ₽</span>
+                  <div class="popup-cart-product">
+                    <a class="popover-catalog-goods button-card-product" href="#">Подробнее</a>
                   </div>
                 </li>
                 <li class="catalog-item">
                   <a class="product-link-item" href="#">
                     <img src="images/catalog/ip68-selfie-stick.jpg" width="360" height="380"
                       alt="Непотопляемая селфи-палка.">
+                    <div class="goods-title-price">
+                      <h3 class="title-goods">Непотопляемая<br>
+                        селфи-палка</h3>
+                      <span class="goods-price">2 500 ₽</span>
+                    </div>
                   </a>
-                  <div class="goods-title-price">
-                    <h3 class="title-goods">Непотопляемая<br>
-                      селфи-палка</h3>
-                    <span class="goods-price">2 500 ₽</span>
+                  <div class="popup-cart-product">
+                    <a class="popover-catalog-goods button-card-product" href="#">Подробнее</a>
                   </div>
                 </li>
                 <li class="catalog-item">
                   <a class="product-link-item" href="#">
                     <img src="images/catalog/follow-me-selfie-stick.jpg" width="360" height="380"
                       alt="Селфи-палка «Следуй за мной».">
+                    <div class="goods-title-price">
+                      <h3 class="title-goods">Селфи-палка «Следуй за<br> мной»</h3>
+                      <span class="goods-price">1 500 ₽</span>
+                    </div>
                   </a>
-                  <div class="goods-title-price">
-                    <h3 class="title-goods">Селфи-палка «Следуй за<br> мной»</h3>
-                    <span class="goods-price">1 500 ₽</span>
+                  <div class="popup-cart-product">
+                    <a class="popover-catalog-goods button-card-product" href="#">Подробнее</a>
                   </div>
                 </li>
               </ul>
               <button class="goods-card-button" type="button">Загрузить ещё</button>
               <div class="pagination-container">
-                <a class="pagination-back">
+                <a class="pagination-back pagination-disabled">
                   <span>Назад</span>
                 </a>
                 <ul class="pagination-container-list">
@@ -340,7 +386,7 @@
             </div>
           </section>
           <div class="copyright">
-            <a href="https://htmlacademy.ru/">
+            <a class="htmlacademy-link" href="https://htmlacademy.ru/">
               <svg width="115" height="33" viewBox="0 0 115 33" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M0 12.9V15.5H2.5V12.9H0Z" fill="#FFC700" />
                 <path
