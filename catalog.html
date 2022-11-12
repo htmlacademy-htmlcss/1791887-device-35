@@ -144,9 +144,19 @@
             <form class="catalog-filter" action="https://echo.htmlacademy.ru/" method="get">
               <fieldset class="filters">
                 <legend class="filter-item-name">Стоимость</legend>
-                <div class="toogle-bar">
-                  <button class="toogle-min" type="button"></button>
-                  <button class="toogle-max" type="button"></button>
+                <div class="range-scale">
+                  <div class="range-bar" style="left: 0; width: 119px">
+                    <button class="range-toogle toogle-min" type="button"></button>
+                    <button class="range-toogle toogle-max" type="button"></button>
+                  </div>
+                </div>
+                <div class="range-input-wrapper">
+                  <label class="catalog-filter-label">от
+                    <input class="range-input first-input-range" type="number" value="0" name="min-price">
+                  </label>
+                  <label class="catalog-filter-label">до
+                    <input class="range-input second-input-range" type="number" value="5000" name="max-price">
+                  </label>
                 </div>
               </fieldset>
 
@@ -154,24 +164,39 @@
                 <legend class="filter-item-name">Цвет</legend>
                 <ul class="filter-list">
                   <li class="filter-item">
-                    <input type="checkbox" name="black" id="black" value="black" checked>
-                    <label class="filter-item-label" for="black">Черный</label>
+                    <label class="filter-item-label">
+                      <input class="visually-hidden filter-input" type="checkbox" name="black" checked>
+                      <span class="control-mark"></span>
+                      <span class="control-label">Черный</span>
+                    </label>
                   </li>
                   <li class="filter-item">
-                    <input type="checkbox" name="white" id="white" value="white" checked>
-                    <label class="filter-item-label" for="white">Белый</label>
+                    <label class="filter-item-label">
+                      <input class="visually-hidden filter-input" type="checkbox" name="white" checked>
+                      <span class="control-mark"></span>
+                      <span class="control-label">Белый</span>
+                    </label>
                   </li>
                   <li class="filter-item">
-                    <input type="checkbox" name="blue" id="blue" value="blue">
-                    <label class="filter-item-label" for="blue">Синий</label>
+                    <label class="filter-item-label">
+                      <input class="visually-hidden filter-input" type="checkbox" name="blue">
+                      <span class="control-mark"></span>
+                      <span class="control-label">Синий</span>
+                    </label>
                   </li>
                   <li class="filter-item">
-                    <input type="checkbox" name="red" id="red" value="red">
-                    <label class="filter-item-label" for="red">Красный</label>
+                    <label class="filter-item-label">
+                      <input class="visually-hidden filter-input" type="checkbox" name="red">
+                      <span class="control-mark"></span>
+                      <span class="control-label">Красный</span>
+                    </label>
                   </li>
                   <li class="filter-item">
-                    <input type="checkbox" name="pink" id="pink" value="pink">
-                    <label class="filter-item-label" for="pink">Розовый</label>
+                    <label class="filter-item-label">
+                      <input class="visually-hidden filter-input" type="checkbox" name="pink">
+                      <span class="control-mark"></span>
+                      <span class="control-label">Розовый</span>
+                    </label>
                   </li>
                 </ul>
               </fieldset>
@@ -180,12 +205,19 @@
                 <legend class="filter-item-name">Bluetooth</legend>
                 <ul class="filter-list">
                   <li class="filter-item">
-                    <input type="radio" name="choice" value="yes" id="bluetooth-yes" checked>
-                    <label class="filter-item-label" for="bluetooth-yes">Есть</label>
+                    <label class="filter-item-label">
+                      <input class="visually-hidden filter-input" type="radio" name="bluetooth" value="bluetooth-yes"
+                        checked>
+                      <span class="radio-mark"></span>
+                      <span class="radio-label">Есть</span>
+                    </label>
                   </li>
                   <li class="filter-item">
-                    <input type="radio" name="choice" value="no" id="bluetooth-no">
-                    <label class="filter-item-label" for="bluetooth-no">Нет</label>
+                    <label class="filter-item-label">
+                      <input class="visually-hidden filter-input" type="radio" name="bluetooth" value="bluetooth-no">
+                      <span class="radio-mark"></span>
+                      <span class="radio-label">Нет</span>
+                    </label>
                   </li>
                 </ul>
               </fieldset>
