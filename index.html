@@ -5,6 +5,7 @@
     <meta charset="utf-8">
     <title>HTML Academy: Девайс</title>
     <link rel="stylesheet" href="styles/styles.css">
+    <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
   </head>
 
   <body>
@@ -16,7 +17,7 @@
             <img class="logo" src="images/logo.svg" width="145" height="36" alt="Логотип сайта Девайс.">
           </a>
           <div class="navigation-user">
-            <form class="search-form" action="#" method="post">
+            <form class="search-form" action="https://echo.htmlacademy.ru/" method="post">
               <label class="visually-hidden" for="search">Поиск по сайту</label>
               <input class="field-search" type="search" id="search" placeholder="Поиск по сайту">
               <button class="search-button" type="submit">Найти</button>
@@ -119,7 +120,7 @@
 
     <main class="main-container">
       <section class="sliders">
-        <div class="container sliders-item">
+        <div class="container">
           <h2 class="visually-hidden">Слайдер с товарами и их описанием</h2>
           <ul class="sliders-list">
             <li class="sliders-item">
@@ -195,6 +196,25 @@
                 </div>
               </div>
             </li>
+            <li>
+              <ol class="sliders-indicators">
+                <li class="sliders-indicators-list">
+                  <button class="sliders-indicators-button sliders-button-current" type="button">
+                    <span class="visually-hidden">1 слайд.</span>
+                  </button>
+                </li>
+                <li class="sliders-indicators-list">
+                  <button class="sliders-indicators-button" type="button">
+                    <span class="visually-hidden">2 слайд.</span>
+                  </button>
+                </li>
+                <li class="sliders-indicators-list">
+                  <button class="sliders-indicators-button" type="button">
+                    <span class="visually-hidden">3 слайд.</span>
+                  </button>
+                </li>
+              </ol>
+            </li>
           </ul>
           <div class="slider-button">
             <button class="slider-navigation slider-back" type="button">
@@ -205,23 +225,7 @@
             </button>
           </div>
         </div>
-        <ol class="sliders-indicators">
-          <li class="sliders-indicators-list">
-            <button class="sliders-indicators-button sliders-button-current" type="button">
-              <span class="visually-hidden">1 слайд.</span>
-            </button>
-          </li>
-          <li class="sliders-indicators-list">
-            <button class="sliders-indicators-button" type="button">
-              <span class="visually-hidden">2 слайд.</span>
-            </button>
-          </li>
-          <li class="sliders-indicators-list">
-            <button class="sliders-indicators-button" type="button">
-              <span class="visually-hidden">3 слайд.</span>
-            </button>
-          </li>
-        </ol>
+
       </section>
       <section class="products">
         <div class="container">
@@ -268,7 +272,7 @@
                   class="services-item-current">Доставка</span></a>
             </li>
             <li class="services-item">
-              <a class="services-link services-item-name services-item-rectangle" href="#"><span>Гарантия</span></a>
+              <a class="services-link services-item-rectangle" href="#"><span>Гарантия</span></a>
             </li>
             <li class="services-item">
               <a class="services-link services-item-name" href="#"><span>Кредит</span></a>
@@ -327,6 +331,7 @@
           </ul>
           <a class="button  button-about-us" href="#">Подробнее о нас</a>
         </section>
+
 
         <section class="contacts-information">
           <h2 class="title about-us-title">Контакты</h2>
@@ -483,6 +488,72 @@
         </div>
       </div>
     </footer>
+
+    <!--Чтобы открылось модальное окно нужно подставить класс modal-open-->
+    <div class="modal-delivery-container">
+      <section class="modal-delivery">
+        <button class="button-close" type="button">
+          <span class="visually-hidden">Закрыть.</span>
+        </button>
+        <h2 class="modal-title">Доставка под заказ</h2>
+        <form class="delivery-form" action="https://echo.htmlacademy.ru/" method="post">
+          <div class="user-info">
+            <div class="field-group">
+              <label class="form-name" for="input-name">Ваше имя:</label>
+              <input class="name-field" type="text" id="input-name" name="input-name" placeholder="Введите имя">
+              <span class="name-add-message">Добавьте имя</span>
+            </div>
+            <div class="field-group">
+              <label class="form-email" for="input-email">Ваш e-mail:</label>
+              <input class="email-field error-modal" type="email" id="input-email" name="input-email"
+                placeholder="почта">
+              <span class="error-message">Забавный у вас адрес</span>
+            </div>
+          </div>
+          <div class="delivery-info">
+            <div class="field-group">
+              <label class="form-delivery" for="input-delivery">Что нужно привезти</label>
+              <input class="delivery-text-field" type="text" id="input-delivery" name="input-delivery"
+                placeholder="В свободной форме" required>
+            </div>
+            <div class="tooltip-value-container">
+              <div class="form-value-container">
+                <label class="form-value" for="input-value">Количество:</label>
+                <span class="tooltip">
+                  <button class="tooltip-toggle" type="button" aria-labelledby="tooltip-label-date">
+                    <svg class="tooltip-icon" width="2" height="12" viewBox="0 0 2 12" fill="currentColor"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <g clip-path="url(#clip0_26119_30)">
+                        <path d="M2 0H0V2H2V0Z" />
+                        <path d="M2 4H0V12H2V4Z" />
+                      </g>
+                      <defs>
+                        <clipPath id="clip0_26119_30">
+                          <rect width="2" height="12" />
+                        </clipPath>
+                      </defs>
+                    </svg>
+                  </button>
+                  <span class="tooltip-text" role="tooltip" id="tooltip-label-date">Постараемся найти, сколько нужно.
+                    Привезём сколько получится по требованиям
+                    к провозу багажа.</span>
+                </span>
+              </div>
+              <div class="value-group">
+                <button class="value-button" type="button">
+                  <span class="visually-hidden">Уменьшить количество.</span>
+                </button>
+                <input class="form-value-field" type="text" id="input-value" name="input-value" placeholder="1">
+                <button class="value-button value-button-add" type="button">
+                  <span class="visually-hidden">Увеличить количество.</span>
+                </button>
+              </div>
+            </div>
+          </div>
+          <button class="button button-form" type="submit">Отправить</button>
+        </form>
+      </section>
+    </div>
   </body>
 
 </html>

@@ -5,18 +5,19 @@
     <meta charset="utf-8">
     <title>Каталог: Моноподы для селфи</title>
     <link rel="stylesheet" href="styles/styles.css">
+    <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
   </head>
 
   <body>
     <header class="page-header">
-      <div class="container">
+      <div class="container container-catalog">
         <h2 class="visually-hidden"> Страница каталога: Моноподы для селфи</h2>
-        <nav class="navigation-interface">
+        <nav class="navigation-interface navigation-interface-catalog">
           <a class="logo-link" href="index.html">
             <img class="logo" src="images/logo.svg" width="145" height="36" alt="Логотип сайта Девайс.">
           </a>
           <div class="navigation-user">
-            <form class="search-form" action="#" method="post">
+            <form class="search-form" action="https://echo.htmlacademy.ru/" method="post">
               <label class="visually-hidden" for="search">Текст поиска</label>
               <input class="field-search field-catalog" type="search" id="search" placeholder="Текст поиска">
               <button class="search-button" type="submit">Найти</button>
@@ -144,9 +145,19 @@
             <form class="catalog-filter" action="https://echo.htmlacademy.ru/" method="get">
               <fieldset class="filters">
                 <legend class="filter-item-name">Стоимость</legend>
-                <div class="toogle-bar">
-                  <button class="toogle-min" type="button"></button>
-                  <button class="toogle-max" type="button"></button>
+                <div class="range-scale">
+                  <div class="range-bar" style="left: 0; width: 119px">
+                    <button class="range-toogle toogle-min" type="button"></button>
+                    <button class="range-toogle toogle-max" type="button"></button>
+                  </div>
+                </div>
+                <div class="range-input-wrapper">
+                  <label class="catalog-filter-label">от
+                    <input class="range-input first-input-range" type="number" value="0" name="min-price">
+                  </label>
+                  <label class="catalog-filter-label">до
+                    <input class="range-input second-input-range" type="number" value="5000" name="max-price">
+                  </label>
                 </div>
               </fieldset>
 
@@ -154,24 +165,39 @@
                 <legend class="filter-item-name">Цвет</legend>
                 <ul class="filter-list">
                   <li class="filter-item">
-                    <input type="checkbox" name="black" id="black" value="black" checked>
-                    <label class="filter-item-label" for="black">Черный</label>
+                    <label class="filter-item-label">
+                      <input class="visually-hidden filter-input" type="checkbox" name="black" checked>
+                      <span class="control-mark"></span>
+                      <span class="control-label">Черный</span>
+                    </label>
                   </li>
                   <li class="filter-item">
-                    <input type="checkbox" name="white" id="white" value="white" checked>
-                    <label class="filter-item-label" for="white">Белый</label>
+                    <label class="filter-item-label">
+                      <input class="visually-hidden filter-input" type="checkbox" name="white" checked>
+                      <span class="control-mark"></span>
+                      <span class="control-label">Белый</span>
+                    </label>
                   </li>
                   <li class="filter-item">
-                    <input type="checkbox" name="blue" id="blue" value="blue">
-                    <label class="filter-item-label" for="blue">Синий</label>
+                    <label class="filter-item-label">
+                      <input class="visually-hidden filter-input" type="checkbox" name="blue">
+                      <span class="control-mark"></span>
+                      <span class="control-label">Синий</span>
+                    </label>
                   </li>
                   <li class="filter-item">
-                    <input type="checkbox" name="red" id="red" value="red">
-                    <label class="filter-item-label" for="red">Красный</label>
+                    <label class="filter-item-label">
+                      <input class="visually-hidden filter-input" type="checkbox" name="red">
+                      <span class="control-mark"></span>
+                      <span class="control-label">Красный</span>
+                    </label>
                   </li>
                   <li class="filter-item">
-                    <input type="checkbox" name="pink" id="pink" value="pink">
-                    <label class="filter-item-label" for="pink">Розовый</label>
+                    <label class="filter-item-label">
+                      <input class="visually-hidden filter-input" type="checkbox" name="pink">
+                      <span class="control-mark"></span>
+                      <span class="control-label">Розовый</span>
+                    </label>
                   </li>
                 </ul>
               </fieldset>
@@ -180,12 +206,19 @@
                 <legend class="filter-item-name">Bluetooth</legend>
                 <ul class="filter-list">
                   <li class="filter-item">
-                    <input type="radio" name="choice" value="yes" id="bluetooth-yes" checked>
-                    <label class="filter-item-label" for="bluetooth-yes">Есть</label>
+                    <label class="filter-item-label">
+                      <input class="visually-hidden filter-input" type="radio" name="bluetooth" value="bluetooth-yes"
+                        checked>
+                      <span class="radio-mark"></span>
+                      <span class="radio-label">Есть</span>
+                    </label>
                   </li>
                   <li class="filter-item">
-                    <input type="radio" name="choice" value="no" id="bluetooth-no">
-                    <label class="filter-item-label" for="bluetooth-no">Нет</label>
+                    <label class="filter-item-label">
+                      <input class="visually-hidden filter-input" type="radio" name="bluetooth" value="bluetooth-no">
+                      <span class="radio-mark"></span>
+                      <span class="radio-label">Нет</span>
+                    </label>
                   </li>
                 </ul>
               </fieldset>
@@ -265,7 +298,7 @@
                     <img src="images/catalog/follow-me-selfie-stick.jpg" width="360" height="380"
                       alt="Селфи-палка «Следуй за мной».">
                     <div class="goods-title-price">
-                      <h3 class="title-goods">Селфи-палка «Следуй за<br> мной»</h3>
+                      <h3 class="title-goods">Селфи-палка «Следуй<br> за мной»</h3>
                       <span class="goods-price">1 500 ₽</span>
                     </div>
                   </a>
