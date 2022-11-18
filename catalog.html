@@ -12,14 +12,16 @@
     <header class="page-header">
       <div class="container container-catalog">
         <h2 class="visually-hidden"> Страница каталога: Моноподы для селфи</h2>
-        <nav class="navigation-interface navigation-interface-catalog">
+        <nav class="navigation-interface">
           <a class="logo-link" href="index.html">
             <img class="logo" src="images/logo.svg" width="145" height="36" alt="Логотип сайта Девайс.">
           </a>
           <div class="navigation-user">
-            <form class="search-form" action="https://echo.htmlacademy.ru/" method="post">
-              <label class="visually-hidden" for="search">Текст поиска</label>
-              <input class="field-search field-catalog" type="search" id="search" placeholder="Текст поиска">
+            <form class="search-form" action="https://echo.htmlacademy.ru/" method="get">
+              <label class="search-form-label">
+                <span class="visually-hidden">Поиск по сайту.</span>
+                <input class="field-search field-catalog" type="search" name="search" placeholder="Текст поиска">
+              </label>
               <button class="search-button" type="submit">Найти</button>
             </form>
             <ul class="user-interface-list-catalog">
@@ -76,7 +78,7 @@
 
           <section class="catalog-navigation-list">
             <h2 class="visually-hidden">Каталог товаров</h2>
-            <div class="navigation-catalog-services">
+            <div class="navigation-catalog-services navigation-catalog">
               <a class="catalog-link" href="catalog.html">Каталог товаров</a>
               <ul class="shop-services">
                 <li class="shop-services-item">
@@ -90,7 +92,8 @@
                 </li>
               </ul>
             </div>
-            <div class="submenu-container">
+            <!--Для того, чтобы показать данный список, нужно добавить для этого элемента второй класс submenu-container-open -->
+            <div class="submenu-container-catalog">
               <ul class="catalog-navigation-items">
                 <li class="catalog-navigation-link">
                   <a class="navigation-link" href="#">Виртуальная реальность</a>
@@ -147,8 +150,12 @@
                 <legend class="filter-item-name">Стоимость</legend>
                 <div class="range-scale">
                   <div class="range-bar" style="left: 0; width: 119px">
-                    <button class="range-toogle toogle-min" type="button"></button>
-                    <button class="range-toogle toogle-max" type="button"></button>
+                    <button class="range-toogle toogle-min" type="button">
+                      <span class="visually-hidden">Изменить минимальную цену.</span>
+                    </button>
+                    <button class="range-toogle toogle-max" type="button">
+                      <span class="visually-hidden">Изменить максимальную цену.</span>
+                    </button>
                   </div>
                 </div>
                 <div class="range-input-wrapper">
@@ -228,20 +235,20 @@
           <div class="catalog-right-column">
             <div class="catalog-filters">
               <label class="catalog-filters-label" for="select-value">Сортировка:</label>
-              <select class="catalog-select" id="select-value">
+              <select class="catalog-select" id="select-value" aria-label="Сортировка">
                 <option value="popular">Популярные</option>
                 <option value="expensive">Сначала дорогие</option>
                 <option value="cheap">Сначала дешевые</option>
               </select>
               <div class="catalog-filter-sort">
                 <button class="filter-sort filter-sort-up">
-                  <span class="visually-hidden">Сортировка от меньшего к большему</span>
+                  <span class="visually-hidden">Сортировка от меньшего к большему.</span>
                   <svg width="12" height="10" viewBox="0 0 12 10" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M6 0L11.5 10H0.5" fill="#cccccc" />
                   </svg>
                 </button>
                 <button class="filter-sort filter-sort-down">
-                  <span class="visually-hidden">Сортировка от большего к меньшему</span>
+                  <span class="visually-hidden">Сортировка от большего к меньшему.</span>
                   <svg width="12" height="10" viewBox="0 0 12 10" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M6 0L11.5 10H0.5" fill="#cccccc" />
                   </svg>

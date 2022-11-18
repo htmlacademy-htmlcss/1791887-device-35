@@ -17,9 +17,11 @@
             <img class="logo" src="images/logo.svg" width="145" height="36" alt="Логотип сайта Девайс.">
           </a>
           <div class="navigation-user">
-            <form class="search-form" action="https://echo.htmlacademy.ru/" method="post">
-              <label class="visually-hidden" for="search">Поиск по сайту</label>
-              <input class="field-search" type="search" id="search" placeholder="Поиск по сайту">
+            <form class="search-form" action="https://echo.htmlacademy.ru/" method="get">
+              <label class="search-form-label">
+                <span class="visually-hidden">Поиск по сайту.</span>
+                <input class="field-search" type="search" name="search" placeholder="Поиск по сайту">
+              </label>
               <button class="search-button" type="submit">Найти</button>
             </form>
             <ul class="user-interface-list">
@@ -357,7 +359,8 @@
           <div class="newsletter-form-wrapper">
             <form class="newsletter-form" action="https://echo.htmlacademy.ru/" method="post">
               <label class="visually-hidden" for="email">email</label>
-              <input class="newsletter-label" placeholder="Ваш e-mail" type="email" id="email" required>
+              <input class="newsletter-label" placeholder="Ваш e-mail" type="email" id="email" name="newsletter-email"
+                required>
               <button class="button-newsletter" type="submit">Подписаться</button>
             </form>
             <p class="newsletter-tick">Это бесплатно</p>
